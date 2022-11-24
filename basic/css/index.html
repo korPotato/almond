@@ -1468,6 +1468,376 @@
     </div> -->
 
 
+    <!-- <h1>Q. flex container</h1>
+  <p>justify-content, align-items</p>
+  
+  <style>
+    .container {
+      width: 200px;
+      height: 100px;
+      background-color: green;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .item {
+      color: red;
+      font-size: 50px;
+    }
+  </style>
+  <h1>HEINEKEN</h1>
+  <div class="container">
+    <div class="item">&#9733;</div>
+  </div> -->
+
+  <!-- <h1>flex items</h1>
+  <h3>order</h3>
+  <p>flex items의 정렬 순서</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: flex;
+    }
+    .item {
+      border: 1px dashed;
+      padding: 0.5rem;
+    }
+    .item:first-child {
+      order: 3;
+    }
+    .item:nth-child(2) {
+      order: 2;
+    }
+    .item:last-child {
+      order: 1;
+    }
+  </style>
+  <div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+  </div>  -->
+
+  <!-- <h3>flex-grow</h3>
+  <p>아이템이 컨테이너의 남는 부분을 채운다</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: flex;
+    }
+    .item {
+      border: 1px dashed;
+      padding: 0.5rem;
+      flex-grow: 0;
+    }
+    .item:nth-child(2) {
+      flex-grow: 1;
+    }
+  </style>
+  
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item(grow)</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h3>flex-shrink</h3>
+  <p>items은 기본적으로 줄어들 수 있다(shrinkable)</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: flex;
+    }
+    .item {
+      width: 200px;
+      border: 1px dashed;
+      flex-shrink: 1;
+      padding: 0.5rem;
+    }
+    .item:nth-child(2) {
+      flex-shrink: 0;
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item (not shrink)</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h3>flex-basis</h3>
+  <p>flex items의 넓이(width)</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .item {
+      border: 1px dashed;
+      padding: 0.5rem;
+      flex-basis: 50%;
+      box-sizing: border-box;
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h3>align-self</h3>
+  <p>컨테이너의 align-items속성을 덮어쓴다</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      height: 100px;
+    }
+    .item {
+      width: 100px;
+      border: 1px dashed;
+    }
+    .item:nth-child(4) {
+      align-self: flex-start;
+    }
+  </style>
+  
+  <div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+  </div> -->
+
+  <!-- <h1>Q. flex items</h1>
+  <p>flex-wrap, flex-basis</p>
+  <style>
+    .container {
+      display: flex;
+      background-color: #ddd;
+      flex-wrap: wrap;
+    }
+    .item {
+      width: 33.33333%;
+      box-sizing: border-box;
+      border: 1px dashed;
+      padding: 0.5rem;
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h1>grid</h1>
+  <p>격자 레이아웃</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: grid;
+      /* 열의 갯수 */
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.25rem;
+    }
+    .item {
+      border: 1px dashed;
+      padding: 0.5rem;
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h1>transform (변형)</h1>
+  <p>translate(이동), scale(크기), rotate(회전)</p>
+  <h3>translate</h3>
+  <p>원래 위치를 기준으로 이동한다</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      width: 100px;
+      height: 100px;
+    }
+    .item {
+      border: 1px dashed;
+      /* translate(x축, y축) */
+      transform: translate(10px, 10px);
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h3>scale</h3>
+  <style>
+    .container {
+      background-color: #ddd;
+    }
+    .item {
+      border: 1px dashed;
+      padding: 0.5rem;
+      display: inline-block;
+    }
+    .item:nth-child(2) {
+      /* scale(x축, y축) */
+      transform: scale(2, 2)
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h3>rotate</h3>
+  <style>
+    .item {
+      padding: 0.5rem;
+      display: inline-block;
+      border: 1px dashed;
+      /* rotate(degree, 각도) */
+      transform: rotate(45deg);
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h1>Responsive style(반응형 스타일)</h1>
+  <p>화면 크기에 따라 style을 다르게 설정한다</p>
+  <style>
+    .container {
+      background-color: #ddd;
+    }
+      /* Mobile first */
+    .title::after {
+      content: "Extra small devices";
+    }
+    @media (min-width: 640px) {
+      .title::after {
+        content: "Small devices";
+      }
+    }
+    @media (min-width: 768px) {
+      .title::after {
+        content: "Medium devices";
+      }
+    }
+    @media (min-width: 1024px) {
+      .title::after {
+        content: "Large devices";
+      }
+    }
+    @media (min-width: 1280px) {
+      .title::after {
+        content: "Extra Large devices";
+      }
+    }
+    @media (min-width: 1536px) {
+      .title::after {
+        content: "2 Extra large devices";
+      }
+    }
+    </style>
+    <div class="container">
+      <h3 class="title">Devices: </h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Asperiores at fugit quia, explicabo facere pariatur iste rerum sapiente incidunt 
+        repudiandae est doloribus nesciunt architecto expedita neque dolor quisquam, in eaque?
+      </p>
+    </div> -->
+
+  <!-- <h1>Q. responsive</h1>
+  <p>flex-wrap, flex-basis</p>
+  <style>
+    .container {
+      background-color: #ddd;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .item {
+      border: 1px dashed;
+      padding: 0.5rem;
+      /* mobile first */
+      flex-basis: 100%;
+      box-sizing: border-box;
+    }
+    @media (min-width: 640px) {
+      .item {
+        flex-basis: 50%;
+      }
+    }
+  </style>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h1>style images</h1>
+  <style>
+    .container {
+      background-color: #ddd;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  </style>
+  
+  <div class="container">
+    <img 
+      src="https://media.diageocms.com/media/hkqpacgn/light-buzz1440.jpg" 
+      alt="기네스"
+    >
+  </div> -->
+
+  <!-- <h1>background-image</h1>
+  <p>put image into element</p>
+  <style>
+    .container {
+      background-color: #ddd;
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+    .bg-gradient-to-r {
+      /* linear-gradient(방향, 시작색상, 끝색상) */
+      background-image: linear-gradient(to right, #000, #fff);
+    }
+    .bg-image {
+      background-image: url("https://media.diageocms.com/media/hkqpacgn/light-buzz1440.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <div class="container">
+    <div class="item bg-gradient-to-r"></div>
+    <div class="item bg-image"></div>
+  </div> -->
+
+
 
     </body>
 </html>
