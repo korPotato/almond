@@ -61,7 +61,7 @@ header .top .you{
     top: 56px;
     z-index: 1;
     background-color: white;
-    box-shadow: 5px 0 10px rgba(83, 80, 80, 0.664)  inset, -5px 0px 10px rgba(83, 80, 80, 0.664) inset;
+    /* box-shadow: 5px 0 10px rgba(83, 80, 80, 0.664)  inset, -5px 0px 10px rgba(83, 80, 80, 0.664) inset; */
 }
 @media screen and (min-width:680px) {
     .a{
